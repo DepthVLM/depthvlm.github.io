@@ -1,0 +1,1 @@
+ffmpeg -i ./images/project_video.mp4 -vcodec libx264 -pix_fmt yuv420p -crf 25 ./images/project_video_compressed.mp4
