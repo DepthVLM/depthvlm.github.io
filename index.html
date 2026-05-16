@@ -242,7 +242,7 @@
             gap: 4px;
         }
         .pc-label {
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: #6b7280;
             text-align: center;
@@ -519,7 +519,7 @@
 
             <!-- Example 1 -->
             <div class="pc-example-block" style="margin-bottom: 40px;">
-                <div style="font-weight: 700; font-size: 0.85rem; color: #6b7280; margin-bottom: 10px; text-transform: uppercase;">Example 1</div>
+                <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 1</div>
                 <div class="pc-grid">
                     <!-- Row 1: Depth Maps -->
                     <div class="pc-cell">
@@ -560,7 +560,7 @@
 
             <!-- Example 2 -->
             <div class="pc-example-block" style="margin-bottom: 40px;">
-                <div style="font-weight: 700; font-size: 0.85rem; color: #6b7280; margin-bottom: 10px; text-transform: uppercase;">Example 2</div>
+                <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 2</div>
                 <div class="pc-grid">
                     <!-- Row 1: Depth Maps -->
                     <div class="pc-cell">
@@ -601,7 +601,7 @@
 
             <!-- Example 3 -->
             <div class="pc-example-block" style="margin-bottom: 40px;">
-                <div style="font-weight: 700; font-size: 0.85rem; color: #6b7280; margin-bottom: 10px; text-transform: uppercase;">Example 3</div>
+                <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 3</div>
                 <div class="pc-grid">
                     <!-- Row 1: Depth Maps -->
                     <div class="pc-cell">
@@ -738,13 +738,15 @@
     // =============================================
     const allViewers = [];
     let currentPointSize = 1.0;
-    let globalUserInteracted = false;
-    const allPromptOverlays = [];
+    // 按 example 分组管理点云动画状态
+    // key: exampleBlock DOM element, value: { interacted: bool, viewers: [...] }
+    const exampleGroups = new Map();
 
-    function stopAllPrompts() {
-        if (globalUserInteracted) return;
-        globalUserInteracted = true;
-        allPromptOverlays.forEach(({ overlay, setInactive, resetCamera }) => {
+    function stopExamplePrompts(exampleBlock) {
+        const group = exampleGroups.get(exampleBlock);
+        if (!group || group.interacted) return;
+        group.interacted = true;
+        group.viewers.forEach(({ overlay, setInactive, resetCamera }) => {
             setInactive();
             resetCamera();
             overlay.classList.remove('visible');
@@ -823,8 +825,12 @@
         container.appendChild(promptOverlay);
         const promptHand = promptOverlay.querySelector('.prompt-hand');
 
-        // 注册到全局，以便任一点云交互时统一停止所有动画
-        allPromptOverlays.push({
+        // 注册到所属 example 分组
+        const exampleBlock = container.closest('.pc-example-block');
+        if (!exampleGroups.has(exampleBlock)) {
+            exampleGroups.set(exampleBlock, { interacted: false, viewers: [] });
+        }
+        exampleGroups.get(exampleBlock).viewers.push({
             overlay: promptOverlay,
             setInactive: () => { promptActive = false; },
             resetCamera: () => {
@@ -837,10 +843,11 @@
             }
         });
 
-        // 监听用户交互 → 停止所有点云的拖拽提示动画
-        container.addEventListener('pointerdown', stopAllPrompts, { once: true });
-        container.addEventListener('wheel', stopAllPrompts, { once: true });
-        container.addEventListener('touchstart', stopAllPrompts, { once: true });
+        // 监听用户交互 → 停止同一 example 内所有点云的拖拽提示动画
+        const onInteraction = () => stopExamplePrompts(exampleBlock);
+        container.addEventListener('pointerdown', onInteraction, { once: true });
+        container.addEventListener('wheel', onInteraction, { once: true });
+        container.addEventListener('touchstart', onInteraction, { once: true });
 
         loader.load(glbPath, function(gltf) {
             const root = gltf.scene;
@@ -968,7 +975,8 @@
         function animate() {
             requestAnimationFrame(animate);
 
-            if (promptActive && !globalUserInteracted && initialCamPos) {
+            const group = exampleGroups.get(exampleBlock);
+            if (promptActive && group && !group.interacted && initialCamPos) {
                 const elapsed = (performance.now() - promptStartTime) / 1000;
                 const sinVal = Math.sin(elapsed * 2.8);
                 const swingFactor = parseFloat(container.getAttribute('data-swing')) || 1.0;
