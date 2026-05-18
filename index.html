@@ -517,6 +517,9 @@
                 <span class="size-value" id="pointSizeValue">1.0</span>
             </div>
 
+            <!-- Indoor Examples -->
+            <div class="sub-section-title" style="text-align: center; font-size: 1.1rem; margin-top: 30px; margin-bottom: 15px; color: #374151;">Indoor Scenes</div>
+
             <!-- Example 1 -->
             <div class="pc-example-block" style="margin-bottom: 40px;">
                 <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 1</div>
@@ -636,6 +639,132 @@
                     <div class="pc-cell">
                         <div class="pc-label pc-label-ours">Ours-4B</div>
                         <div class="pc-viewer-container" id="viewer-6-ours" data-glb="./images/pointcloud_indoor/ours-6.glb" data-zoom="0.65" data-swing="1.0" data-pitch="5" data-yaw="5" data-offset-x="-0.3" data-offset-y="0.4" data-offset-z="0"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outdoor Examples -->
+            <div class="sub-section-title" style="text-align: center; font-size: 1.1rem; margin-top: 50px; margin-bottom: 15px; color: #374151;">Outdoor Scenes</div>
+
+            <!-- Example 1 (Outdoor) -->
+            <div class="pc-example-block" style="margin-bottom: 40px;">
+                <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 1</div>
+                <div class="pc-grid">
+                    <!-- Row 1: Depth Maps -->
+                    <div class="pc-cell">
+                        <div class="pc-label">GT Depth Map</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/gt-0273.png" alt="GT Depth Map"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">Youtu-VL</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/youtu-0273.png" alt="Youtu-VL Depth"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">DepthLM</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/depthlm-0273.png" alt="DepthLM Depth"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label pc-label-ours">Ours-4B</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/ours-0273.png" alt="Ours-4B Depth"></div>
+                    </div>
+                    <!-- Row 2: RGB + Point Clouds -->
+                    <div class="pc-cell">
+                        <div class="pc-label">RGB Image</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/rgb-0273.jpg" alt="RGB"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">Youtu-VL</div>
+                        <div class="pc-viewer-container" id="viewer-0273-youtu" data-glb="./images/pointcloud_outdoor/youtu-0273.glb" data-zoom="0.5" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="5" data-offset-y="-1" data-offset-z="0"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">DepthLM</div>
+                        <div class="pc-viewer-container" id="viewer-0273-depthlm" data-glb="./images/pointcloud_outdoor/depthlm-0273.glb" data-zoom="0.8" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="0" data-offset-y="0" data-offset-z="0"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label pc-label-ours">Ours-4B</div>
+                        <div class="pc-viewer-container" id="viewer-0273-ours" data-glb="./images/pointcloud_outdoor/ours-0273.glb" data-zoom="0.8" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="0" data-offset-y="0" data-offset-z="0"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 2 (Outdoor) -->
+            <div class="pc-example-block" style="margin-bottom: 40px;">
+                <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 2</div>
+                <div class="pc-grid">
+                    <!-- Row 1: Depth Maps -->
+                    <div class="pc-cell">
+                        <div class="pc-label">GT Depth Map</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/gt-0299.png" alt="GT Depth Map"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">Youtu-VL</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/youtu-0299.png" alt="Youtu-VL Depth"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">DepthLM</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/depthlm-0299.png" alt="DepthLM Depth"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label pc-label-ours">Ours-4B</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/ours-0299.png" alt="Ours-4B Depth"></div>
+                    </div>
+                    <!-- Row 2: RGB + Point Clouds -->
+                    <div class="pc-cell">
+                        <div class="pc-label">RGB Image</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/rgb-0299.jpg" alt="RGB"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">Youtu-VL</div>
+                        <div class="pc-viewer-container" id="viewer-0299-youtu" data-glb="./images/pointcloud_outdoor/youtu-0299.glb" data-zoom="0.3" data-swing="0.7" data-pitch="0" data-yaw="0" data-offset-x="15" data-offset-y="3" data-offset-z="0"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">DepthLM</div>
+                        <div class="pc-viewer-container" id="viewer-0299-depthlm" data-glb="./images/pointcloud_outdoor/depthlm-0299.glb" data-zoom="0.8" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="0" data-offset-y="0" data-offset-z="0"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label pc-label-ours">Ours-4B</div>
+                        <div class="pc-viewer-container" id="viewer-0299-ours" data-glb="./images/pointcloud_outdoor/ours-0299.glb" data-zoom="0.8" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="0" data-offset-y="1.5" data-offset-z="0"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 3 (Outdoor) -->
+            <div class="pc-example-block" style="margin-bottom: 40px;">
+                <div style="font-weight: 700; font-size: 1.05rem; color: #6b7280; margin-bottom: 10px;">Example 3</div>
+                <div class="pc-grid">
+                    <!-- Row 1: Depth Maps -->
+                    <div class="pc-cell">
+                        <div class="pc-label">GT Depth Map</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/gt-0391.png" alt="GT Depth Map"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">Youtu-VL</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/youtu-0391.png" alt="Youtu-VL Depth"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">DepthLM</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/depthlm-0391.png" alt="DepthLM Depth"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label pc-label-ours">Ours-4B</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/ours-0391.png" alt="Ours-4B Depth"></div>
+                    </div>
+                    <!-- Row 2: RGB + Point Clouds -->
+                    <div class="pc-cell">
+                        <div class="pc-label">RGB Image</div>
+                        <div class="pc-img-container"><img src="./images/depthmap_outdoor/rgb-0391.jpg" alt="RGB"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">Youtu-VL</div>
+                        <div class="pc-viewer-container" id="viewer-0391-youtu" data-glb="./images/pointcloud_outdoor/youtu-0391.glb" data-zoom="0.4" data-swing="1.0" data-pitch="10" data-yaw="0" data-offset-x="0" data-offset-y="2" data-offset-z="0"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label">DepthLM</div>
+                        <div class="pc-viewer-container" id="viewer-0391-depthlm" data-glb="./images/pointcloud_outdoor/depthlm-0391.glb" data-zoom="0.7" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="0" data-offset-y="0" data-offset-z="0"></div>
+                    </div>
+                    <div class="pc-cell">
+                        <div class="pc-label pc-label-ours">Ours-4B</div>
+                        <div class="pc-viewer-container" id="viewer-0391-ours" data-glb="./images/pointcloud_outdoor/ours-0391.glb" data-zoom="0.8" data-swing="1.0" data-pitch="0" data-yaw="0" data-offset-x="0" data-offset-y="3" data-offset-z="0"></div>
                     </div>
                 </div>
             </div>
@@ -763,28 +892,18 @@
         const glbPath = container.getAttribute('data-glb');
         if (!glbPath) return;
 
-        const width = container.clientWidth;
-        const height = container.clientHeight;
+        // === 缓存的点云数据（纯 JS 数据，不占 WebGL 资源） ===
+        let cachedPositions = null;
+        let cachedColors = null;
+        let cachedCameraParams = null; // { position, target, near, far, fov, aspect }
 
-        const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xffffff);
-
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
-        camera.position.set(0, 0, 2);
-
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(width, height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        container.appendChild(renderer.domElement);
-
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.1;
-        controls.enableZoom = true;
-        controls.enablePan = true;
-        controls.autoRotate = false;
-
+        // === 活跃的 WebGL 资源（可被 dispose 和重建） ===
+        let renderer = null;
+        let scene = null;
+        let camera = null;
+        let controls = null;
         let pointsMaterial = null;
+        let animationId = null;
 
         // === 交互提示动画状态 ===
         let promptActive = false;
@@ -834,7 +953,7 @@
             overlay: promptOverlay,
             setInactive: () => { promptActive = false; },
             resetCamera: () => {
-                if (initialCamPos) {
+                if (initialCamPos && camera) {
                     camera.position.copy(initialCamPos);
                     controls.target.copy(initialTarget);
                     camera.lookAt(initialTarget);
@@ -849,27 +968,197 @@
         container.addEventListener('wheel', onInteraction, { once: true });
         container.addEventListener('touchstart', onInteraction, { once: true });
 
-        loader.load(glbPath, function(gltf) {
+        // ========== 创建 renderer 并渲染（从缓存数据重建） ==========
+        function createRendererAndScene() {
+            if (renderer) return; // 已存在则跳过
+
+            const width = container.clientWidth || 300;
+            const height = container.clientHeight || 300;
+
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xffffff);
+
+            camera = new THREE.PerspectiveCamera(
+                cachedCameraParams.fov,
+                width / height,
+                cachedCameraParams.near,
+                cachedCameraParams.far
+            );
+            camera.position.set(
+                cachedCameraParams.position.x,
+                cachedCameraParams.position.y,
+                cachedCameraParams.position.z
+            );
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            container.appendChild(renderer.domElement);
+
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+            controls.enableZoom = true;
+            controls.enablePan = true;
+            controls.autoRotate = false;
+            controls.target.set(
+                cachedCameraParams.target.x,
+                cachedCameraParams.target.y,
+                cachedCameraParams.target.z
+            );
+            controls.update();
+
+            // 重建点云 mesh
+            const pcGeometry = new THREE.BufferGeometry();
+            pcGeometry.setAttribute('position', new THREE.Float32BufferAttribute(cachedPositions, 3));
+            if (cachedColors && cachedColors.length > 0) {
+                pcGeometry.setAttribute('color', new THREE.Float32BufferAttribute(cachedColors, 3));
+            }
+
+            pointsMaterial = new THREE.PointsMaterial({
+                size: currentPointSize,
+                vertexColors: cachedColors && cachedColors.length > 0,
+                sizeAttenuation: false
+            });
+
+            const points = new THREE.Points(pcGeometry, pointsMaterial);
+            scene.add(points);
+
+            // 恢复交互提示动画状态（始终使用初始参数作为动画基准）
+            initialCamPos = new THREE.Vector3(
+                cachedCameraParams.position.x,
+                cachedCameraParams.position.y,
+                cachedCameraParams.position.z
+            );
+            initialTarget = new THREE.Vector3(
+                cachedCameraParams.target.x,
+                cachedCameraParams.target.y,
+                cachedCameraParams.target.z
+            );
+            camDist = initialCamPos.distanceTo(initialTarget);
+
+            // 重建时重置动画时间，使摆动从初始位置（sin(0)=0）开始
+            if (promptActive) {
+                promptStartTime = performance.now();
+            }
+
+            // 更新 allViewers 中的引用
+            const viewerEntry = allViewers.find(v => v.container === container);
+            if (viewerEntry) {
+                viewerEntry.renderer = renderer;
+                viewerEntry.camera = camera;
+                viewerEntry.scene = scene;
+                viewerEntry.controls = controls;
+                viewerEntry.getMaterial = () => pointsMaterial;
+            }
+
+            // 启动渲染循环
+            function animate() {
+                animationId = requestAnimationFrame(animate);
+
+                const group = exampleGroups.get(exampleBlock);
+                if (promptActive && group && !group.interacted && initialCamPos) {
+                    const elapsed = (performance.now() - promptStartTime) / 1000;
+                    const sinVal = Math.sin(elapsed * 2.8);
+                    const swingFactor = parseFloat(container.getAttribute('data-swing')) || 1.0;
+                    const swingAngle = sinVal * 0.20 * swingFactor;
+
+                    const dx = initialCamPos.x - initialTarget.x;
+                    const dz = initialCamPos.z - initialTarget.z;
+                    const baseAngle = Math.atan2(dx, dz);
+                    const newAngle = baseAngle + swingAngle;
+
+                    camera.position.x = initialTarget.x + camDist * Math.sin(newAngle);
+                    camera.position.z = initialTarget.z + camDist * Math.cos(newAngle);
+                    camera.position.y = initialCamPos.y;
+                    camera.lookAt(initialTarget);
+
+                    const tx = -sinVal * 14;
+                    promptHand.style.transform = `translateX(${tx}px)`;
+                } else {
+                    controls.update();
+                }
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        // ========== 销毁 renderer（释放 WebGL 上下文） ==========
+        function disposeRenderer() {
+            if (!renderer) return;
+
+            // 仅当用户已经交互过（教学动画已停止）时，才保存当前相机位置
+            // 如果 promptActive 仍为 true，说明还在播放教学动画，应保留初始相机参数不变
+            const group = exampleGroups.get(exampleBlock);
+            const userInteracted = group && group.interacted;
+            if (userInteracted && camera && controls) {
+                cachedCameraParams.position = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
+                cachedCameraParams.target = { x: controls.target.x, y: controls.target.y, z: controls.target.z };
+                cachedCameraParams.near = camera.near;
+                cachedCameraParams.far = camera.far;
+            }
+
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+
+            // dispose Three.js 资源
+            if (scene) {
+                scene.traverse(obj => {
+                    if (obj.geometry) obj.geometry.dispose();
+                    if (obj.material) {
+                        if (Array.isArray(obj.material)) {
+                            obj.material.forEach(m => m.dispose());
+                        } else {
+                            obj.material.dispose();
+                        }
+                    }
+                });
+            }
+
+            if (controls) {
+                controls.dispose();
+                controls = null;
+            }
+
+            renderer.dispose();
+            if (renderer.domElement && renderer.domElement.parentNode) {
+                renderer.domElement.parentNode.removeChild(renderer.domElement);
+            }
+            renderer = null;
+            scene = null;
+            camera = null;
+            pointsMaterial = null;
+        }
+
+        // ========== GLB 加载 + 重试机制 ==========
+        const MAX_RETRIES = 3;
+        const RETRY_DELAYS = [1000, 2000, 4000];
+
+        function loadGLB(retryCount) {
+            loader.load(glbPath, function(gltf) {
             const root = gltf.scene;
-            
+
             let allPositions = [];
             let allColors = [];
-            
+
             root.traverse(function(child) {
                 if (child.isMesh || child.isPoints) {
                     const geometry = child.geometry;
-                    
+
                     if (geometry.attributes.position) {
                         child.updateWorldMatrix(true, false);
                         const positions = geometry.attributes.position;
-                        
+
                         for (let i = 0; i < positions.count; i++) {
                             const v = new THREE.Vector3();
                             v.fromBufferAttribute(positions, i);
                             v.applyMatrix4(child.matrixWorld);
                             allPositions.push(v.x, v.y, v.z);
                         }
-                        
+
                         if (geometry.attributes.color) {
                             const colors = geometry.attributes.color;
                             for (let i = 0; i < colors.count; i++) {
@@ -895,44 +1184,55 @@
 
             if (allPositions.length === 0) return;
 
-            const pcGeometry = new THREE.BufferGeometry();
-            pcGeometry.setAttribute('position', new THREE.Float32BufferAttribute(allPositions, 3));
-            if (allColors.length > 0) {
-                pcGeometry.setAttribute('color', new THREE.Float32BufferAttribute(allColors, 3));
+            // ===== 计算几何和相机参数（只做一次） =====
+            // 先计算 center offset
+            const tempGeometry = new THREE.BufferGeometry();
+            tempGeometry.setAttribute('position', new THREE.Float32BufferAttribute(allPositions, 3));
+            tempGeometry.computeBoundingBox();
+            const center = new THREE.Vector3();
+            tempGeometry.boundingBox.getCenter(center);
+
+            // 将点云居中
+            for (let i = 0; i < allPositions.length; i += 3) {
+                allPositions[i] -= center.x;
+                allPositions[i + 1] -= center.y;
+                allPositions[i + 2] -= center.z;
             }
 
-            pointsMaterial = new THREE.PointsMaterial({
-                size: currentPointSize,
-                vertexColors: allColors.length > 0,
-                sizeAttenuation: false
-            });
-
-            const points = new THREE.Points(pcGeometry, pointsMaterial);
-            scene.add(points);
-
-            pcGeometry.computeBoundingBox();
-            pcGeometry.center();
-
+            // 应用 data-offset
             const offsetX = parseFloat(container.getAttribute('data-offset-x')) || 0;
             const offsetY = parseFloat(container.getAttribute('data-offset-y')) || 0;
             const offsetZ = parseFloat(container.getAttribute('data-offset-z')) || 0;
             if (offsetX || offsetY || offsetZ) {
-                pcGeometry.translate(offsetX, offsetY, offsetZ);
+                for (let i = 0; i < allPositions.length; i += 3) {
+                    allPositions[i] += offsetX;
+                    allPositions[i + 1] += offsetY;
+                    allPositions[i + 2] += offsetZ;
+                }
             }
 
-            pcGeometry.computeBoundingBox();
-            const box = pcGeometry.boundingBox;
+            // 计算最终 bounding box
+            const finalGeometry = new THREE.BufferGeometry();
+            finalGeometry.setAttribute('position', new THREE.Float32BufferAttribute(allPositions, 3));
+            finalGeometry.computeBoundingBox();
+            const box = finalGeometry.boundingBox;
             const bSize = new THREE.Vector3();
             box.getSize(bSize);
+            finalGeometry.dispose();
+            tempGeometry.dispose();
+
+            const width = container.clientWidth || 300;
+            const height = container.clientHeight || 300;
+            const aspect = width / height;
+            const fov = 45;
 
             const targetCenter = new THREE.Vector3(0, 0, 0);
-
-            const fovRad = camera.fov * Math.PI / 180;
+            const fovRad = fov * Math.PI / 180;
             const halfH = bSize.y / 2;
             const halfW = bSize.x / 2;
 
             const distForHeight = halfH / Math.tan(fovRad / 2);
-            const distForWidth = halfW / (Math.tan(fovRad / 2) * camera.aspect);
+            const distForWidth = halfW / (Math.tan(fovRad / 2) * aspect);
 
             let optimalDist = Math.max(distForHeight, distForWidth);
             optimalDist *= 1.1;
@@ -951,71 +1251,55 @@
             const camY = targetCenter.y - totalDist * Math.sin(pitchRad);
             const camZ = targetCenter.z + totalDist * Math.cos(yawRad) * Math.cos(pitchRad);
 
-            camera.position.set(camX, camY, camZ);
+            // ===== 缓存数据 =====
+            cachedPositions = new Float32Array(allPositions);
+            cachedColors = allColors.length > 0 ? new Float32Array(allColors) : null;
+            cachedCameraParams = {
+                position: { x: camX, y: camY, z: camZ },
+                target: { x: targetCenter.x, y: targetCenter.y, z: targetCenter.z },
+                near: totalDist * 0.01,
+                far: totalDist * 5,
+                fov: fov,
+                aspect: aspect
+            };
 
-            camera.near = totalDist * 0.01;
-            camera.far = totalDist * 5;
-            camera.updateProjectionMatrix();
-
-            controls.target.copy(targetCenter);
-            controls.update();
+            // 注册到 allViewers
+            allViewers.push({
+                container,
+                renderer: null,
+                camera: null,
+                scene: null,
+                controls: null,
+                getMaterial: () => pointsMaterial
+            });
 
             // === 启动交互提示动画 ===
-            initialCamPos = camera.position.clone();
-            initialTarget = controls.target.clone();
-            camDist = initialCamPos.distanceTo(initialTarget);
             promptActive = true;
             promptStartTime = performance.now();
             requestAnimationFrame(() => promptOverlay.classList.add('visible'));
 
+            // 如果当前在视口内，立即创建 renderer
+            createRendererAndScene();
+
         }, undefined, function(error) {
-            console.error('Error loading GLB:', glbPath, error);
-        });
-
-        function animate() {
-            requestAnimationFrame(animate);
-
-            const group = exampleGroups.get(exampleBlock);
-            if (promptActive && group && !group.interacted && initialCamPos) {
-                const elapsed = (performance.now() - promptStartTime) / 1000;
-                const sinVal = Math.sin(elapsed * 2.8);
-                const swingFactor = parseFloat(container.getAttribute('data-swing')) || 1.0;
-                const swingAngle = sinVal * 0.20 * swingFactor;
-
-                const dx = initialCamPos.x - initialTarget.x;
-                const dz = initialCamPos.z - initialTarget.z;
-                const baseAngle = Math.atan2(dx, dz);
-                const newAngle = baseAngle + swingAngle;
-
-                camera.position.x = initialTarget.x + camDist * Math.sin(newAngle);
-                camera.position.z = initialTarget.z + camDist * Math.cos(newAngle);
-                camera.position.y = initialCamPos.y;
-                camera.lookAt(initialTarget);
-
-                const tx = -sinVal * 14;
-                promptHand.style.transform = `translateX(${tx}px)`;
+            console.warn('GLB load failed (attempt ' + (retryCount + 1) + '/' + (MAX_RETRIES + 1) + '):', glbPath, error);
+            if (retryCount < MAX_RETRIES) {
+                setTimeout(function() { loadGLB(retryCount + 1); }, RETRY_DELAYS[retryCount]);
             } else {
-                controls.update();
+                console.error('GLB load permanently failed after all retries:', glbPath);
             }
-
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        allViewers.push({
-            container,
-            renderer,
-            camera,
-            scene,
-            controls,
-            getMaterial: () => pointsMaterial
         });
+        }
 
+        // 启动首次加载
+        loadGLB(0);
+
+        // ========== ResizeObserver ==========
         const resizeObserver = new ResizeObserver(entries => {
             for (const entry of entries) {
                 const w = entry.contentRect.width;
                 const h = entry.contentRect.height;
-                if (w > 0 && h > 0) {
+                if (w > 0 && h > 0 && camera && renderer) {
                     camera.aspect = w / h;
                     camera.updateProjectionMatrix();
                     renderer.setSize(w, h);
@@ -1023,11 +1307,27 @@
             }
         });
         resizeObserver.observe(container);
+
+        // ========== 可见性控制：离开视口时 dispose renderer，进入视口时重建 ==========
+        const visibilityObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 进入视口：如果数据已加载且 renderer 不存在，则重建
+                    if (cachedPositions && !renderer) {
+                        createRendererAndScene();
+                    }
+                } else {
+                    // 离开视口：销毁 renderer 释放 WebGL 上下文
+                    disposeRenderer();
+                }
+            });
+        }, { rootMargin: '200px' });
+        visibilityObserver.observe(container);
     }
 
     function initAllViewers() {
         const containers = document.querySelectorAll('.pc-viewer-container[data-glb]');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1040,7 +1340,7 @@
                 }
             });
         }, {
-            rootMargin: '200px'
+            rootMargin: '400px'
         });
 
         containers.forEach(c => observer.observe(c));
@@ -1054,7 +1354,7 @@
         slider.addEventListener('input', function() {
             currentPointSize = parseFloat(this.value);
             sizeLabel.textContent = currentPointSize.toFixed(1);
-            
+
             allViewers.forEach(v => {
                 const mat = v.getMaterial();
                 if (mat) {
